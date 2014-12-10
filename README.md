@@ -1,0 +1,1 @@
+WIP Example of using Jersey on embedded Jetty (and hoping to explore each of Jetty/Jersey components work).

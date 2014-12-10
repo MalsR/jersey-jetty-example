@@ -6,12 +6,14 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
-public class JettyServerApplication {
+public final class EmbeddedJettyExampleApplication {
 
     //WIP
     public static void main(String[] args) {
-        Server jettyServer = new Server(8080);
+        //Initialise a new jetty server with the following port
+        final Server jettyServer = new Server(8080);
 
+        //Allows you to specify the context the servlet is mapped to if I'm not mistaken
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         //possible duplicate as root path added below
         context.setContextPath("/");
