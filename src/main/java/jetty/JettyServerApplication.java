@@ -19,7 +19,9 @@ public class JettyServerApplication {
         jettyServer.setHandler(context);
 
         ServletHolder servletHolder = new ServletHolder(new ServletContainer());
-//        servletHolder.setInitParameter("com.sun.jersey.config.property.resourceConfigClass", "com.sun.jersey.api.core.PackagesResourceConfig");
+        //servletHolder.setInitParameter("com.sun.jersey.config.property.resourceConfigClass", "com.sun.jersey.api.core.PackagesResourceConfig");
+
+        //scan the following folder for jersey resources with either @Path or @Provider
         servletHolder.setInitParameter(PackagesResourceConfig.PROPERTY_PACKAGES, "jersey.resources");
         servletHolder.setInitOrder(1);
 
